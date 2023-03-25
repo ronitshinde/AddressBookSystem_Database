@@ -30,3 +30,5 @@ VALUES('Ronit','Patil','Gaon','Satara','Mah',401256,7418529631,'ronit@gmail.com'
 --Update Query
 UPDATE AddressBook_DB SET LastName = 'Rane' WHERE FirstName = 'Ronit'
 
+--Delete Query
+DELETE FROM AddressBook_DB WHERE FirstName = 'Ronit'
