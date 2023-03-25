@@ -18,4 +18,13 @@ Zip INT NOT NULL,
 PhoneNumber BIGINT NOT NULL,
 Email VARCHAR (20) NOT NULL,
 );
+--Select Query
+SELECT * FROM AddressBook_DB
+
+--Insert Query 
+INSERT INTO AddressBook_DB(FirstName,LastName,Address,City,State,Zip,PhoneNumber,Email)
+VALUES('Ronit','Patil','Gaon','Satara','Mah',401256,7418529631,'ronit@gmail.com'),
+('Raj','Roy','village','Pune','Guj',475486,7412589632,'roy@gmail.com'),
+('Sam','Manekshaw','Kheda','Mumbai','Tamil Nadu',451263,7894561232,'sam@gmail.com')
+
 
