@@ -27,4 +27,6 @@ VALUES('Ronit','Patil','Gaon','Satara','Mah',401256,7418529631,'ronit@gmail.com'
 ('Raj','Roy','village','Pune','Guj',475486,7412589632,'roy@gmail.com'),
 ('Sam','Manekshaw','Kheda','Mumbai','Tamil Nadu',451263,7894561232,'sam@gmail.com')
 
+--Update Query
+UPDATE AddressBook_DB SET LastName = 'Rane' WHERE FirstName = 'Ronit'
 
