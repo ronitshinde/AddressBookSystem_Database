@@ -32,3 +32,10 @@ UPDATE AddressBook_DB SET LastName = 'Rane' WHERE FirstName = 'Ronit'
 
 --Delete Query
 DELETE FROM AddressBook_DB WHERE FirstName = 'Ronit'
+
+INSERT INTO AddressBook_DB(FirstName,LastName,Address,City,State,Zip,PhoneNumber,Email)
+VALUES('Kiran','Mulik','Taluka','Solapur','Mah',478569,7417485631,'Kiran@gmail.com'),
+('Mohit','Mane','Tehsil','kolhapur','Raj',451263,7418529632,'Mohit@gmail.com')
+
+--Retreive Query
+SELECT * FROM AddressBook_DB WHERE City = 'Pune'
