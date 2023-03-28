@@ -29,6 +29,9 @@ VALUES('Ronit','Patil','Gaon','Satara','Mah',401256,7418529631,'ronit@gmail.com'
 
 --Update Query
 UPDATE AddressBook_DB SET LastName = 'Rane' WHERE FirstName = 'Ronit'
+UPDATE AddressBook_DB SET AddressBookName = 'Family' WHERE City = 'Pune'
+UPDATE AddressBook_DB SET AddressBookType = 'Friends' WHERE City = 'Kolhapur'
+
 
 --Delete Query
 DELETE FROM AddressBook_DB WHERE FirstName = 'Ronit'
@@ -54,4 +57,8 @@ SELECT COUNT (*) AS CityCount,City FROM AddressBook_DB GROUP BY City
 --Sort Alphabetically
 SELECT * FROM AddressBook_DB WHERE City = 'Pune' ORDER BY FirstName 
 SELECT * FROM AddressBook_DB WHERE City = 'Kolhapur' ORDER BY FirstName
- 
+
+--Alter Table
+ALTER TABLE AddressBook_DB ADD AddressBookType VARCHAR(50)
+ALTER TABLE AddressBook_DB ADD AddressBookName VARCHAR(50)
+
