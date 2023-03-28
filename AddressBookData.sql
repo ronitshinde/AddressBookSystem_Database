@@ -50,3 +50,8 @@ SELECT COUNT (*) FROM AddressBook_DB WHERE State = 'Mah' GROUP BY State
 
 SELECT COUNT (*) AS StateCount,State FROM AddressBook_DB GROUP BY State
 SELECT COUNT (*) AS CityCount,City FROM AddressBook_DB GROUP BY City
+
+--Sort Alphabetically
+SELECT * FROM AddressBook_DB WHERE City = 'Pune' ORDER BY FirstName 
+SELECT * FROM AddressBook_DB WHERE City = 'Kolhapur' ORDER BY FirstName
+ 
