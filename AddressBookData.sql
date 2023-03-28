@@ -34,8 +34,19 @@ UPDATE AddressBook_DB SET LastName = 'Rane' WHERE FirstName = 'Ronit'
 DELETE FROM AddressBook_DB WHERE FirstName = 'Ronit'
 
 INSERT INTO AddressBook_DB(FirstName,LastName,Address,City,State,Zip,PhoneNumber,Email)
-VALUES('Kiran','Mulik','Taluka','Solapur','Mah',478569,7417485631,'Kiran@gmail.com'),
-('Mohit','Mane','Tehsil','kolhapur','Raj',451263,7418529632,'Mohit@gmail.com')
+VALUES('Shubham','Pisal','Lane','Pune','Punjab',414568,7789456331,'King@gmail.com'),
+('Sheetal','Pathan','Track','Kolhapur','Tamil Nadu',445693,7412589563,'Queen@gmail.com'),
+('Rushikesh','Pawar','Area','Solapur','Mah',445674,7412563963,'Queen@gmail.com')
 
 --Retreive Query
 SELECT * FROM AddressBook_DB WHERE City = 'Pune'
+
+--Size Query
+SELECT COUNT (*) FROM AddressBook_DB GROUP BY City 
+SELECT COUNT (*) FROM AddressBook_DB GROUP BY State
+
+SELECT COUNT (*) FROM AddressBook_DB WHERE City = 'Kolhapur' GROUP BY State
+SELECT COUNT (*) FROM AddressBook_DB WHERE State = 'Mah' GROUP BY State
+
+SELECT COUNT (*) AS StateCount,State FROM AddressBook_DB GROUP BY State
+SELECT COUNT (*) AS CityCount,City FROM AddressBook_DB GROUP BY City
