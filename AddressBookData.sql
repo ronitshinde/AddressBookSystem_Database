@@ -29,6 +29,11 @@ VALUES('Ronit','Patil','Gaon','Satara','Mah',401256,7418529631,'ronit@gmail.com'
 
 --Update Query
 UPDATE AddressBook_DB SET LastName = 'Rane' WHERE FirstName = 'Ronit'
+UPDATE AddressBook_DB SET AddressBookName = 'Family' WHERE City = 'Pune'
+UPDATE AddressBook_DB SET AddressBookName = 'Information_Technology' WHERE AddressBookType = 'Branch'
+UPDATE AddressBook_DB SET AddressBookName = 'College' WHERE AddressBookType = 'Friends'
+UPDATE AddressBook_DB SET AddressBookName = 'Cousin' WHERE AddressBookType= 'Family'
+
 
 --Delete Query
 DELETE FROM AddressBook_DB WHERE FirstName = 'Ronit'
@@ -54,4 +59,14 @@ SELECT COUNT (*) AS CityCount,City FROM AddressBook_DB GROUP BY City
 --Sort Alphabetically
 SELECT * FROM AddressBook_DB WHERE City = 'Pune' ORDER BY FirstName 
 SELECT * FROM AddressBook_DB WHERE City = 'Kolhapur' ORDER BY FirstName
- 
+
+--Alter Table
+ALTER TABLE AddressBook_DB ADD AddressBookType VARCHAR(50)
+ALTER TABLE AddressBook_DB ADD AddressBookName VARCHAR(50)
+
+--Count By Type
+SELECT AddressBookType,COUNT (AddressBookType) AS NoOfContactPresent FROM AddressBook_DB GROUP BY AddressBookType
+
+--Add Person
+INSERT INTO AddressBook_DB (FirstName,LastName,Address,City,State,Zip,PhoneNumber,Email,AddressBookType,AddressBookName)VALUES('Padmavati','Rathod','Desert','Jaipur','Rajasthan',852631,7854123692,'Padmavati@gmail.com','Family','Cousin'),
+('Shivaji','Raje','Deccan','Satara','Mah',415263,9865321245,'Raje@gmail.com','Friends','College')
